@@ -1,0 +1,19 @@
+# Disable Directory listing
+Options -Indexes
+
+# Block files which need to be hidden
+<Files ~ "\.(env|json|config.js|md|gitignore|gitattributes|lock)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+RewriteEngine On
+
+# Skip rewriting for download.php script
+RewriteCond %{REQUEST_URI} ^/download\.php [NC]
+RewriteRule ^ - [L]
+
+# General rewrite rules for other URLs (non-existent files or directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*)$ index.php?view=$1 [B,L,QSA]
