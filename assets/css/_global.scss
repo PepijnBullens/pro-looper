@@ -1,19 +1,6 @@
-$background-color: #1E1E1E;
-$primary-color: #3A4348;
-$secondary-color: #73797D;
-$text-primary-color: #E5E5E5;
-$text-secondary-color: #B0B0B0;
-$highlight-color: #c5cbd3;
-$border-color: #AFAFAF;
-
 @font-face {
   font-family: 'satoshi';
   src: url(./fonts/satoshi.ttf);
-}
-
-@font-face {
-  font-family: 'satoshi';
-  src: url(../fonts/satoshi.ttf);
 }
 
 * {
@@ -24,45 +11,8 @@ $border-color: #AFAFAF;
   color: $text-primary-color;
 }
 
-code * {
-  color: #444;
-}
-
 html,
 body {
   width: 100%;
   height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow-x: hidden;
-
-  background-color: $background-color;
-}
-
-body {
-  padding: 40px;
-}
-
-footer {
-  width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: $background-color;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: $primary-color;
-  border-radius: 5px;
 }

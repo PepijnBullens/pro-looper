@@ -1,6 +1,6 @@
 <?php
   // Include global configuration and functions
-  include_once './core/db_connect.php';
+  require_once './core/db_connect.php';
 
   // Initialize the 'view' variable
   $view = '';
@@ -32,7 +32,7 @@
   }
 
   // Include the determined page file
-  require_once $env['BASE_URL'] . 'core/header.php';
-  require_once $env['BASE_URL'] . 'views/' . $page;
-  require_once $env['BASE_URL'] . 'core/footer.php';
+  require_once './core/header.php';
+  require_once './views/' . $page;
+  require_once './core/footer.php';
 ?>
